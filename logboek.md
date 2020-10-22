@@ -1,7 +1,7 @@
 # 22 oktober om 22u07 werd deze repository opgestart
 
 ## 22/10/2020 - avond
-Brainstorm App-Ideas: 22u10 ->
+Brainstorm App-Ideas: 22u10 -> 22u30
 - <b>Mindspacer</b> (some definitions according to myself)
   - A simple-shape visualisation of thoughts, meant to recycle distracting thoughts while working for later use
   - Organiser/retainer of distracting thoughts during times you need to concentrate
