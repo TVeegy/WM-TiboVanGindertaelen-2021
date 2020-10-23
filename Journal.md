@@ -15,4 +15,4 @@
 
 ### 23/10/2020 - namiddag
 -  <b>Setting up .net Hosting (Combell) + Github structuring 14u10 -> 14u35</b>  
--  <b>Github structuring 14u35 -> ?u?</b>  
+-  <b>Github structuring 14u35 -> 15u20</b>  
