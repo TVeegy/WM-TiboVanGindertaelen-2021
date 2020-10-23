@@ -1,4 +1,4 @@
-### WM-TiboVanGindertaelen-Logboek-2021
+### WM-TiboVanGindertaelen-2021
 
 #### Milestones
 - Een manier uitwerken om de werkomgeving op te zetten ivm version control, planning, insights & structuur  
