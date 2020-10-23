@@ -15,4 +15,8 @@
 
 ### 23/10/2020 - namiddag
 -  <b>Setting up .net Hosting (Combell) + Github structuring 14u10 -> 14u35</b>  
--  <b>Github structuring 14u35 -> 15u20</b>  
+-  <b>Github structuring 14u35 -> 15u30</b>  
+  - Branches for every project instead of separate repositories
+  - Requirement: Pull request from specific branch to master (One-Way manual synchronizing necessary)
+  - Problem: Difficult to distinguish repositories in Github Desktop (now only by directory path at mouseover)
+    - [A screenshot](Images/img_01.png)  
