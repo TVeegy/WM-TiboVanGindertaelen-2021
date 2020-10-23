@@ -19,3 +19,4 @@
   - Branches for every project instead of separate repositories
   - Requirement: Pull request from specific branch to master (One-Way manual synchronizing necessary)
   - Problem: Difficult to distinguish repositories in Github Desktop (now only by directory path at mouseover)
+    - [A screenshot](Images/img_01.png)  
