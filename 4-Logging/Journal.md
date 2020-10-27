@@ -28,4 +28,8 @@
 - Module 1 covered; Introducing the concept of React plus some technicalities ([Samenvatting](Documents/Samenvatting-Module_1-Intro.pdf))
 - Module 2 skipped because of existing knowledhe of JS ES6 functionalities.
 - Module 3 kicked off by watching the first lecture in it.
-- [Clockify Timestamp](Images/img_02.png) 
+- [Clockify Timestamp](Images/img_02.png)
+
+### 27/10/2020 - voormiddag
+-  Covering Lecture 26-41 of Module 3 (no review, practical follow-along): 10u20-11u55
+- [Clockify Timestamp](Images/img_02.png)
