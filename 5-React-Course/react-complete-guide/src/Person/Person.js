@@ -1,6 +1,5 @@
 import React from 'react';
 
-// ES6 approach - BPE
 const person = (props) => {
     return (
     <div>
