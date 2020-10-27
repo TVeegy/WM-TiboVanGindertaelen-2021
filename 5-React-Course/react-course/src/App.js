@@ -1,4 +1,6 @@
 // ctrl + K + C/U --- shift + alt + F
+// Stateless, presentational or dumb components VS statefull, smart containers
+// Class-based state-management or Functional maganement via useState (slices)
 import React, { useState } from 'react';
 import './App.css';
 import Person from './Person/Person';
@@ -26,9 +28,19 @@ const app = props => {
     <div className="App">
       <h1>Test</h1>
       <button onClick={switchNameHandler}>Switch Names</button>
-      <Person name={personState.persons[0].name} age={personState.persons[0].age} />
-      <Person name={personState.persons[1].name} age={personState.persons[1].age} />
-      <Person name={personState.persons[2].name} age={personState.persons[2].age} />
+      <Person
+        name={personState.persons[0].name}
+        age={personState.persons[0].age}
+      />
+      <Person
+        name={personState.persons[1].name}
+        age={personState.persons[1].age}
+        click={this.switchNameHandler} >
+        My Hobbies: Racing</Person>
+      <Person
+        name={personState.persons[2].name}
+        age={personState.persons[2].age}
+      />
     </div>
   );
 }
