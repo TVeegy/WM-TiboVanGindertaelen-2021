@@ -1,18 +1,17 @@
 // ctrl + K + C/U --- shift + alt + F
-// First letter is uppercase -> no interfereance with native HTML
-// React re-renders by watching props and state
-// Managing state happends class-based or via hooks on the function level
+// React re-rendering -> watching props or state
+// State-management in two ways, prop for class-based and hooks for functional
 
-// Not "Component" anymore, now a hook -> useX
+// Importing components AND hooks
 import React, { useState } from 'react';
 import './App.css';
 import Person from './Person/Person';
 
 const app = props => {
-  // This hook returns two items in array: current state and updateState function -> re-render
-  // ArrayDestructuring -> pull elem out of array from return rightside array
-  // VERY IMPORTANT: the hook REPLACES the state != MERGE of state with class-based state management
-  // Solution -> multiple useState calls allowed, useState(otherState: 'value of the state')
+  // Hooks returns current state and setter
+  // ArrayDestructuring -> Multi-Define vars on function return (Array Destructurising)
+  // VERY IMPORTANT: Class-based MERGES as opposed to hook which REPLACES (losing properties!)
+  // Solution -> reference/specify target prop in useState call
   const [personState, setPersonsState] = useState({
     persons: [
       { name: 'Max', age: 28 },
@@ -21,9 +20,11 @@ const app = props => {
     ]
   });
 
-  // This ES6 syntax provides correct access to the class via "this" - Normal function syntax doesn't!
-  // Functions within functions!
-  const switchNameHandler = () => {
+  const [otherState, setOtherState] = useState('some other value');
+
+  // ES6 syntax provides correct scoping -> this-referencing possible
+  // Functions nesting!
+  const switchNameAndAgeHandler = () => {
     setPersonsState({
       persons: [
         { name: 'Maximillian', age: 28 },
@@ -38,10 +39,17 @@ const app = props => {
     <div className="App">
       <h1>Test</h1>
       {/* Parentheses in the function ref would execute the function at render-runtime */}
-      <button onClick={switchNameHandler}>Switch Names</button>
-      <Person name={personState.persons[0].name} age={personState.persons[0].age} />
-      <Person name={personState.persons[1].name} age={personState.persons[1].age} />
-      <Person name={personState.persons[2].name} age={personState.persons[2].age} />
+      <button onClick={switchNameAndAgeHandler}>Switch Names</button>
+      <Person
+        name={personState.persons[0].name}
+        age={personState.persons[0].age} />
+      <Person
+        name={personState.persons[1].name}
+        age={personState.persons[1].age} 
+        click={switchNameAndAgeHandler}>My Hobbies: Racing</Person>
+      <Person
+        name={personState.persons[2].name}
+        age={personState.persons[2].age} />
     </div>
   );
 
