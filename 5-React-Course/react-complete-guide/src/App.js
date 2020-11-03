@@ -1,11 +1,11 @@
 // ctrl + K + C/U --- shift + alt + F
-// React re-rendering -> watching props or state
 
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
+  // Defining State
   state = {
     persons: [
       { name: 'Max', age: 28 },
@@ -15,6 +15,7 @@ class App extends Component {
     ohterState: 'some other value'
   }
 
+  // Handler
   nameChangedHandler = (event) => {
     this.setState({
       persons: [
@@ -27,21 +28,22 @@ class App extends Component {
     });
   }
 
+  // Handler
   deletePersonHandler = (personIndex) => {
-    // copies full array and returns it
-    // const persons = this.state.persons.slice();
     // ES6 spread operator - same logic
     const persons = [...this.state.persons]
     persons.splice(personIndex, 1);
     this.setState({persons: persons});
   }
 
+  // Handler
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
     this.setState({ showPersons: !doesShow });
   }
 
   render() {
+    // Defining Variables
     const style = {
       backgroundColor: 'white',
       font: 'inherit',
@@ -52,13 +54,13 @@ class App extends Component {
 
     let persons = null;
 
+    // Mapping our JS state content to Jsx DOM content
     if (this.state.showPersons) {
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
             return <Person
               name={person.name}
-              // Alternative would be to bind
               click={() => this.deletePersonHandler(index)}
               age={person.age} />
           })}
@@ -66,14 +68,13 @@ class App extends Component {
       );
     }
 
+    // Returning the to-be rendered JSx DOM content
     return (
-      // Typically one root elem (or json) per component or as return for this render function
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is Really Working!</p>
         <button
           style={style}
-          // Function call: onClick={() => this.togglePersonsHandler}>Switch Names</button>
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
           {persons}
       </div>
