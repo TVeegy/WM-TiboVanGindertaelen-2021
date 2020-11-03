@@ -15,18 +15,6 @@ class App extends Component {
     ohterState: 'some other value'
   }
 
-  // ES6 syntax provides correct scoping -> this-referencing possible
-  // Functions nesting!
-  switchNameAndAgeHandler = (newName) => {
-    this.setState({
-      persons: [
-        { name: newName, age: 28 },
-        { name: 'Manu', age: 29 },
-        { name: 'Stephanie', age: 27 }
-      ]
-    });
-  }
-
   nameChangedHandler = (event) => {
     this.setState({
       persons: [
@@ -37,6 +25,12 @@ class App extends Component {
       otherStaet: 'some value',
       showPersons: false
     });
+  }
+
+  deletePersonHandler = (personIndex) => {
+    const persons = this.state.persons;
+    persons.splice(personIndex, 1);
+    this.setState({persons: persons});
   }
 
   togglePersonsHandler = () => {
@@ -58,9 +52,11 @@ class App extends Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-          {this.state.persons.map(person => {
+          {this.state.persons.map((person, index) => {
             return <Person
               name={person.name}
+              // Alternative would be to bind
+              click={() => this.deletePersonHandler(index)}
               age={person.age} />
           })}
         </div>
