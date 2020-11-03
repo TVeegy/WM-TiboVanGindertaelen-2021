@@ -72,21 +72,7 @@ class App extends Component {
           style={style}
           // Function call: onClick={() => this.togglePersonsHandler}>Switch Names</button>
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
-        {/* Ternary expression, no block statements allowed. Use of === */}
-        { this.state.showPersons ?
-          <div>
-            <Person
-              name={this.state.persons[0].name}
-              age={this.state.persons[0].age} />
-            <Person
-              name={this.state.persons[1].name}
-              age={this.state.persons[1].age}
-              click={this.switchNameAndAgeHandler.bind(this, 'Maximillian!')}
-              changed={this.nameChangedHandler}>My Hobbies: Racing</Person>
-            <Person
-              name={this.state.persons[2].name}
-              age={this.state.persons[2].age} />
-          </div> : null}
+          {persons}
       </div>
     );
   }
