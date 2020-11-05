@@ -32,7 +32,7 @@ class App extends Component {
     const persons = [...this.state.persons]; // Remember Slice
     persons[personIndex] = person;
 
-    this.setState({ persons: persons });
+    this.setState({ persons: persons }); //
   }
 
   // Handler
