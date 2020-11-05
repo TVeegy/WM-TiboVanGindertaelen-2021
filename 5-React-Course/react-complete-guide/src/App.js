@@ -24,12 +24,9 @@ class App extends Component {
     // Modern approach
     const person = { ...this.state.persons[personIndex] };
 
-    // Alt approach
-    // const person = Object.assign({}, this.state.persons[personIndex]);
-
     person.name = event.target.value;
 
-    const persons = [...this.state.persons]; // Remember Slice
+    const persons = [...this.state.persons];
     persons[personIndex] = person;
 
     this.setState({ persons: persons });
@@ -37,7 +34,6 @@ class App extends Component {
 
   // Handler
   deletePersonHandler = (personIndex) => {
-    // ES6 spread operator - same logic
     const persons = [...this.state.persons]
     persons.splice(personIndex, 1);
     this.setState({ persons: persons });
