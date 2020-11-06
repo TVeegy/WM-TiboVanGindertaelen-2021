@@ -6,7 +6,7 @@ import Person from './Person/Person';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
-  // Defining State
+  // Defining State --
   state = {
     persons: [
       { id: 'ffff', name: 'Max', age: 28 },
