@@ -20,7 +20,10 @@ class App extends Component {
       { id: 'dddd', name: 'Manu', age: 29 },
       { id: 'gggg', name: 'Stephanie', age: 26 }
     ],
-    ohterState: 'some other value'
+    ohterState: 'some other value',
+    showPersons: false,
+    showCockpit: true,
+    changeCounter: 0
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -58,7 +61,13 @@ class App extends Component {
     const persons = [...this.state.persons];
     persons[personIndex] = person;
 
-    this.setState({ persons: persons });
+    // Without this, used state -> quicker accessed by other call (concurrency)
+    this.setState((prevState, props) => {
+      return {
+        persons: persons,
+        changeCounter: this.state.changeCounter + 1
+      }
+    });
   }
 
   // Handler
