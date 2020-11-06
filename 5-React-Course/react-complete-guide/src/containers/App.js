@@ -11,7 +11,7 @@ class App extends Component {
     console.log('[App.js] constructor');
   }
   
-  // Defining State
+  // Defining State -
   state = {
     persons: [
       { id: 'ffff', name: 'Max', age: 28 },
