@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
 
+// If scripts version is higher than 1; Ejecting replaced by using ".Person.modules.css" + update to actual filename
+
 class App extends Component {
   // Defining State
   state = {
