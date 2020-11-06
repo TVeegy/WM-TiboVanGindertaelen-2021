@@ -26,9 +26,9 @@ class App extends Component {
     return state;
   }
 
-  componentWillMount() {
-    console.log('[App.js] commonentWillMount');
-  }
+  // componentWillMount() {
+  //   console.log('[App.js] commonentWillMount');
+  // }
 
   componentDidMount() {
     console.log('[App.js] commonentDidMount');
