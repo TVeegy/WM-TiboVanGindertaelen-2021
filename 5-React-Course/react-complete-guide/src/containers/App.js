@@ -9,8 +9,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     console.log('[App.js] constructor');
-    // state init allowed, mordern syntax is under this
-    // this.state = and not setState as there is no state to merge with
   }
   
   // Defining State

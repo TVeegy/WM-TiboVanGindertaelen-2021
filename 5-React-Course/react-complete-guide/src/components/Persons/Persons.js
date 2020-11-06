@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Person from './Person/Person';
 
-const persons = (props) => {
+class Persons extends Component{
     console.log('[Persons.js] rendering');
     return props.persons.map((person, index) => {
         return (<Person
@@ -12,6 +12,6 @@ const persons = (props) => {
             changed={(event) => props.changed(event, person.id)} />
         );
     });
-};
+}
 
-export default persons;
+export default Persons;
