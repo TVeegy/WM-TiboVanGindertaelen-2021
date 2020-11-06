@@ -1,10 +1,7 @@
 import React from 'react';
 import style from 'styled-components';
 // import './Person.css'
-// functionality taken over by styledDiv comp
 
-// A COMPONENT is loaded into the const!
-// No selectors!
 const StyledDiv = style.div`
     width: 60%;
     margin: 16px auto;
@@ -26,7 +23,6 @@ const person = (props) => {
     // };
 
     return (
-        // <div className="Person" style={style}>
         <StyledDiv>
             < p onClick={props.click} > I'm a Person and I'm {props.name} and I'm {props.age} years old!</p>
             < p > {props.children}</p >
