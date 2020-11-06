@@ -3,6 +3,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+import styled from 'styled-components';
+
+// Ampersand for pseudo-selector (hover)
+const StyledButton = styled.button`
+  background-color: green;
+  color: white;
+  font: inherit;
+  border: 1px solid blue;
+  padding: 8px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+`
 
 class App extends Component {
   // Defining State
@@ -98,9 +114,8 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p className={classes.join(' ')}> This is Really Working!</p>
-        <button
-          style={style}
-          onClick={this.togglePersonsHandler}>Toggle Persons</button>
+        <StyledButton
+          onClick={this.togglePersonsHandler}>Toggle Persons</StyledButton>
         {persons}
       </div>
     );
