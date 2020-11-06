@@ -16,7 +16,6 @@ const cockpit = (props) => {
     }
 
     return (
-        // Temp fix, using this div as root
         <div className={classes.Cockpit}>
             <h1>Hi, I'm a React App</h1>
             <p className={assignedClasses.join(' ')}> This is Really Working!</p>

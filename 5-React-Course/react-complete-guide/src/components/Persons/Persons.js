@@ -1,8 +1,6 @@
 import React from 'react';
 import Person from './Person/Person';
 
-// alt ES6 way of functional comp -> () instead of {} + return
-
 const persons = (props) =>
     props.persons.map((person, index) => {
         return <Person
