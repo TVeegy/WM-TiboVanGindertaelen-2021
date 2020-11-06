@@ -5,7 +5,7 @@ import classes from './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
-  // Defining State
+  // Defining State --
   state = {
     persons: [
       { id: 'ffff', name: 'Max', age: 28 },
