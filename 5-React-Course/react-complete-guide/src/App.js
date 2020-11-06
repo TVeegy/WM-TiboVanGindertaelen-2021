@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Person from './Person/Person';
 
-// If scripts version is higher than 1; Ejecting replaced by using ".Person.modules.css" + update to actual filename
-
 class App extends Component {
   // Defining State
   state = {
@@ -23,7 +21,6 @@ class App extends Component {
       return p.id === id;
     });
 
-    // Modern approach
     const person = { ...this.state.persons[personIndex] };
 
     person.name = event.target.value;
