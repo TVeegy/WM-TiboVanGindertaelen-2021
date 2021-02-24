@@ -9,12 +9,21 @@ class App extends Component {
       { name: 'Max', age: 28 },
       { name: 'Manu', age: 29 },
       { name: 'Stephanie', age: 26 }
-    ]
+    ],
+    otherState: 'some other value'
   }
 
-  // ES6 arrow function (a property, preserving a this reference to the class and not the would-be function scope)
+  // ES6 arrow function (a property, not a function)
   switchNameHandler = () => {
-     console.log('Was clicked!')
+     // console.log('Was clicked!')
+     // this.state.persons[0].name = 'Maximilian'; WILL NOT WORK
+    this.setState({
+      persons: [
+        { name: 'Maximilian', age: 28 },
+        { name: 'Manu', age: 29 },
+        { name: 'Stephanie', age: 27 }
+      ]
+    });
   }
   
   render() {
