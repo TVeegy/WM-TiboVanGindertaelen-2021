@@ -1,5 +1,0 @@
-https://www.markdownguide.org/basic-syntax/#lists-1
-https://guides.github.com/features/mastering-markdown/
-
-backspace alternative: (/)
-https://stackoverflow.com/questions/26626256/how-to-insert-a-line-break-br-in-markdown
